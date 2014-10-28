@@ -20,4 +20,5 @@ if(!$exists) {
     }
 }
 
+
 $connection->close();
