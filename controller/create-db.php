@@ -4,7 +4,9 @@ require_once(__DIR__ . "/../database/database.php");
 /*directory of the file. If used inside an include, the 
 directory of the included file is returned. */
 $connection = new mysqli($host,$username,$password);
-
+/*mysqli is for the connection to work so u need the 
+host,username,and password in order because it goes through 
+each one in that order to make the connection work */
 if($connection->connect_error) {
 	die("Error: " . $connection->connection_error);
 }
