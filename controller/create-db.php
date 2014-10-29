@@ -19,5 +19,9 @@ if(!$exists) {
     	echo "Successfully created database;" . $database;
     }
 }
+else {
+    echo "Database already exists. ";
+    /*to let us know that the database exists*/
+}
 
 $connection->close();
