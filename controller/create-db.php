@@ -24,4 +24,14 @@ else {
     /*to let us know that the database exists*/
 }
 
+$query = $connection->query("CREATE TABLE posts ("
+	//creates id's for posts.
+	. "id int(11) NOT NULL AUTO_INCREMENT, "
+	// title is a string of 255 characters.
+	. "title varchar(255) NOT NULL,"
+	// creates posts column.
+	. "post text NOT NULL,"
+	// telling thr post text that the primary key is id.
+	. "PRIMARY KEY (id))");
+
 $connection->close();
