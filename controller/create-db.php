@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ . "/../database/database.php");
+require_once(__DIR__ . "/../model/database.php");
 /*directory of the file. If used inside an include, the 
 directory of the included file is returned. */
 $connection = new mysqli($host,$username,$password);
