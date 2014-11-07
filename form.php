@@ -15,6 +15,7 @@
 
    <div>
       <button type="submit">Submit</button>
+      <!--the submit button only refreshes the page -->
    </div>
 
 </form>
