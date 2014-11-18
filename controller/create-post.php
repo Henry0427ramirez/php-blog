@@ -1,6 +1,6 @@
 <?php
 
-   require_once(__DIR__ . "/../model/database.php");
+   require_once(__DIR__ . "/../model/config.php");
 
    $connection = new mysqli($host, $username, $password, $database);
    //your storing th connection from create-db into the create-post
@@ -21,4 +21,3 @@
    }
 
    $connection->close();
-   
