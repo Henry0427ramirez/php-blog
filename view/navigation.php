@@ -6,6 +6,7 @@ require_once(__DIR__ . "/../model/config.php");
    <ul>
    	  <li>
    	  	<a href="<?php echo $path . "post.php" ?>">Blog Post Form</a>
+   	  	<!--a better way to fix connection path problems -->
    	  </li>
    </ul>
 </nav>

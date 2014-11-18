@@ -6,17 +6,16 @@
 <form method="post" action="<?php echo $path . "controller/create-post.php"; ?>">
 	<div>
 	   <label for="title">Title: </label>
-	   <input type="text" name="type"/>
+	   <input type="text" name="title" />
 	   <!--used this to create a title-->
 	</div>
-          
 	<div>
-	   <label for="post">Post:</label>
+	   <label for="post">Post: </label>
 	   <textarea name="post"></textarea>
 	   <!--used this to create a post box that expands-->
 	</div>
-
 	<div>
 	   <button type="submit">Submit</button>
+	   <!-- our submit button to submit our posts -->
 	</div>
 </form>
