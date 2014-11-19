@@ -16,4 +16,30 @@ class Database {
        $this->password = $password;
        $this->database = $database;
 	}
+  
+    public function openConnection(){
+     //we want to establish a connection
+    	$this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
+    
+        if($this->connection->connect_error) {
+	    die("<p>Error: " . $this->connection->connection_error . "</p>");
+        }
+    }
+    public function closeConnection(){
+        if(isset($this->connection)){
+            $this->connection->close();  
+        }
+    // to check if theres information in our call then closing it.
+    }
+    public function query($string){
+        $this->openConnection();
+    //we use the query to open the string then close it
+        $query = $this->connection->query($string);
+
+        $this->closeConnection();
+
+        return $query;
+    //to return the results of the query
+    }
 }
+
