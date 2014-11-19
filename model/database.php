@@ -32,14 +32,15 @@ class Database {
     // to check if theres information in our call then closing it.
     }
     public function query($string){
-        $this->openConnection();
-    //we use the query to open the string then close it
+        // http://stackoverflow.com/questions/9625003/php-mysql-create-new-connection-for-each-query
+        if(! $this->connection instanceof mysqli )
+              $this->openConnection();
+
+        //we use the query to open the string then close it
         $query = $this->connection->query($string);
 
-        $this->closeConnection();
-
         return $query;
-    //to return the results of the query
+    //to return the results of the query(or state of query)
     }
 }
 

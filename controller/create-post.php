@@ -4,7 +4,7 @@
    //your storing th connection from create-db into the create-post
 
    $title = filter_input(INPUT_POST,"title",FILTER_SANITIZE_STRING);
-   //filter the title from hackers
+   //filter the title from hackers // +1 for you for preventing queries parameters
    $post = filter_input(INPUT_POST,"post",FILTER_SANITIZE_STRING);
    //stops hackers from taking our stuff
    
