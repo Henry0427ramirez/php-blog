@@ -3,26 +3,6 @@
 require_once(__DIR__ . "/../model/config.php");
 /*directory of the file. If used inside an include, the 
 directory of the included file is returned. */
-$connection = new mysqli($host,$username,$password);
-/*$host(the server) $username(name of host) password(server password) */
-if($connection->connect_error) {
-	die("<p>Error: " . $connection->connection_error . "</p>");
-}
-
-$exists = $connection->select_db($database);
-/* this is used to see if the database exists*/
-if(!$exists) {
-	$query = $connection->query("CREATE DATABASE $database");
-    /*this is used to create a database.*/
-
-    if ($query) {
-    	echo "<p>Successfully created database;" . $database . "</p>";
-    }
-}
-else {
-    echo "<p>Database already exists.</p> ";
-    /*to let us know that the database exists*/
-}
 
 $query = $connection->query("CREATE TABLE posts ("
 	//creates id's for posts.
@@ -44,4 +24,3 @@ else{
 	in there own lines*/
 }
 
-$connection->close();

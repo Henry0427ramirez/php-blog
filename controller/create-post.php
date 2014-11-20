@@ -17,5 +17,3 @@
    	  echo "<p>$connection->error</p>";
       // tells us theres an error 
    }
-
-   $connection->close();
