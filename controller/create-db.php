@@ -4,7 +4,7 @@ require_once(__DIR__ . "/../model/config.php");
 /*directory of the file. If used inside an include, the 
 directory of the included file is returned. */
 
-$query = $connection->query("CREATE TABLE posts ("
+$query = $_SESSION["connection"]->query("CREATE TABLE posts ("
 	//creates id's for posts.
 	. "id int(11) NOT NULL AUTO_INCREMENT, "
 	// title is a string of 255 characters.
@@ -19,7 +19,7 @@ if ($query) {
 	//to let u know we created a table.
 }
 else{
-	echo "<p>$connection->error</p>";
+	echo "<p>" . $_SESSION["connection"]->error . "</p>";
 	/* the p tags are to put the statemnets in paragraphs
 	in there own lines*/
 }

@@ -8,12 +8,12 @@
    $post = filter_input(INPUT_POST,"post",FILTER_SANITIZE_STRING);
    //stops hackers from taking our stuff
    
-   $query = $connection->query("INSERT INTO posts SET title = '$title', post = '$post'");
+   $query = $_SESSION["connection"]->query("INSERT INTO posts SET title = '$title', post = '$post'");
    if($query) {
       echo "<p>Successfully inserted post: $title</p>"; 
       //to tell us if our post works
    }
    else {
-   	  echo "<p>$connection->error</p>";
+   	  echo "<p>" . $_SESSION["connection"]->error . "</p>";
       // tells us theres an error 
    }
