@@ -5,6 +5,7 @@ class Database {
 	private $username;
 	private $password;
 	private $database;
+	public $error;
 	//these variables will stay with us
 	//these varibles will be hidden when people access the file
 	//we use private to only access it here in this file
@@ -60,6 +61,10 @@ class Database {
         $this->openConnection();
     //we use the query to open the string then close it
         $query = $this->connection->query($string);
+        
+        if (!$query) {
+        	$this->error = $this->connection->error;
+        }
 
         $this->closeConnection();
 
