@@ -1,5 +1,7 @@
 <?php
+   require_once(__DIR__ . "/../view/header.php");
    require_once(__DIR__ . "/../model/config.php");
+   require_once(__DIR__ . "/../view/footer.php");
    //your storing th connection from create-db into the create-post
 
    $title = filter_input(INPUT_POST,"title",FILTER_SANITIZE_STRING);
