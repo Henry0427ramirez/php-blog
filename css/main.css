@@ -12,6 +12,14 @@ body{
   background-repeat: no-repeat;
   max-width: 100%;
 }
+h1{
+  color: white;
+  background-color:rgba(0,0,0,.6);
+}
+label{
+  color: white;
+  background-color:rgba(0,0,0,.6);
+}
 @media screen and (max-width: 460px) {
 body {
   background-repeat: no-repeat;
