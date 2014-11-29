@@ -1,3 +1,22 @@
 body{
-	background-color: 8E9AAD;
+  font-size: 30px;
+  text-align: center;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+  background-image: url("../images/colors.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
 }
+@media screen and (max-width: 460px) {
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+}
+}
+
