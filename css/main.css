@@ -3,7 +3,7 @@ body{
   text-align: center;
   position: fixed; 
   top: 0;
-  left; 0;
+  left: 0;
   /* Preserve aspet ratio */
   background-image: url("../images/colors.jpg");
   background-size: cover;
@@ -20,6 +20,8 @@ label{
   color: white;
   background-color:rgba(0,0,0,.6);
 }
+
+
 @media screen and (max-width: 460px) {
 body {
   background-repeat: no-repeat;
