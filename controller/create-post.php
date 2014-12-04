@@ -8,11 +8,14 @@
    //filter the title from hackers
    $post = filter_input(INPUT_POST,"post",FILTER_SANITIZE_STRING);
    //stops hackers from taking our stuff
+   $date = new DateTime('today');
+   $time = new DateTime('America/Los_Angeles');
    
    $query = $_SESSION["connection"]->query("INSERT INTO posts SET title = '$title', post = '$post'");
    if($query) {
       echo "<p>Successfully inserted post: $title</p>"; 
       //to tell us if our post works
+      echo "Posted on: " . $date->format("M/D" . " " . "d/Y") .  " at " . $time->format("G:i");
    }
    else {
    	  echo "<p>" . $_SESSION["connection"]->error . "</p>";
