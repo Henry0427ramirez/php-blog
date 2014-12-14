@@ -14,6 +14,6 @@
   	//we want to connect the session when its not fiiled
   $connection = new Database($host, $username, $password, $database);
   //$host(the server) $username(name of host) password(server password and our database) 
-$_SESSION["connection"] = $connection;
-//we are going to connect our connection variable to our sessions variable
-}
+  $_SESSION["connection"] = $connection;
+  //we are going to connect our connection variable to our sessions variable
+  }

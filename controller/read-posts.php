@@ -12,6 +12,5 @@
     		echo "<p>" . $row['post'] . "</h1>";
     		echo "<br/>";
     		echo "</div";
-
     	}
     }
