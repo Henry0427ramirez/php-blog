@@ -42,5 +42,10 @@
   </div><!-- /.container-fluid -->
 </nav>
 </head>
+<div class="row">
+	<div class="col-xs-6">
+	<p></p>
+	</div>
+</div>
 <body>
 <!-- this is the head of our code-->
