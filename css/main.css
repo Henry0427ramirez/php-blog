@@ -7,9 +7,7 @@ body{
   /* Preserve aspet ratio */
   background-image: url("../images/man-and-little-girl.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100%;
-  min-width: 100%;
+  background-repeat: no-repeat; 
   max-width: 100%;
 }
 h1{
@@ -21,12 +19,28 @@ label{
   background-color:rgba(0,0,0,.6);
 }
 li{
-  font-size: 20px
+  font-size: 20px;
+}
+  .navbar-static-top{
+  max-width: 100%;
+
+}
+.col-xs-6{
+  max-width: 50%;
+}
+.class{
+ font-size: 40%;
+}
+p{
+  font-size: 40%;
 }
 
 
 @media screen and (max-width: 460px) {
 body {
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
  
